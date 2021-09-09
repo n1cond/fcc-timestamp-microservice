@@ -28,7 +28,7 @@ const twoDigits = (num) => num.toLocaleString('en-US',{minimumIntegerDigits: 2})
 const formatDateString = (date) => {
   const year = date.getUTCFullYear();
   const month = allYear[date.getUTCMonth()];
-  const day = date.getUTCDate();
+  const day = twoDigits(date.getUTCDate());
   const hr = twoDigits(date.getUTCHours());
   const min = twoDigits(date.getUTCMinutes());
   const sec = twoDigits(date.getUTCSeconds());
